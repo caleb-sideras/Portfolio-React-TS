@@ -3,15 +3,11 @@ import * as THREE from 'three'
 import { Canvas, useFrame, useLoader, } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars } from "@react-three/drei";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
-import circleImg from '../Assets/circle.png';
-
 type Props = {}
 
 export const Points: FC = () => {
 
     const bufferRef = useRef<React.RefObject<React.ReactNode> | React.RefCallback<THREE.BufferAttribute> | null | undefined>(null)
-    const imgTex = useLoader(THREE.TextureLoader, circleImg)
-
     let t = 0;
     let f = 0.002;
     let a = 3;
@@ -38,6 +34,7 @@ export const Points: FC = () => {
     useFrame(() => {
         t += 15
 
+        {/* @ts-ignore  */ }
         const positions = bufferRef.current?.array as Float32Array[]
 
         // console.log(positions)
@@ -48,12 +45,12 @@ export const Points: FC = () => {
             for (let zi = 0; zi < count; zi++) {
                 let x = sep * (xi - count / 2);
                 let z = sep * (zi - count / 2);
-
+                {/* @ts-ignore  */ }
                 positions[i + 1] = graph(x, z);
                 i += 3;
             }
         }
-
+        {/* @ts-ignore  */ }
         bufferRef.current.needsUpdate = true;
     })
 

@@ -11,15 +11,6 @@ const App: React.FC = () => {
     button1.current?.focus()
   }, [button1])
   
-  const handleClick = (e: React.MouseEvent<HTMLLIElement>) => {
-    console.log("hello")
-    e.preventDefault()
-    e.target.classList.add('border-b-4')
-    // button1.current?.focus()
-    // button1.current?.children[0].classList.add('border-b-4')
-    // button1.current?.classList.add('border-b-4')
-  }
-  
 
   return (
     <div className="App flex flex-col items-center w-full flex-grow-1">
@@ -51,7 +42,6 @@ const App: React.FC = () => {
                   <p className="text-left md:text-center pl-2 md:pl-0">
                     <Link className="menu-item block md:inline-block hover-navbar no-underline text-grey-darkest hover:text-grey-darker font-semibold uppercase mb-1 hover:text-accent transition-all" to="/audio">Audio</Link> 
                     <Link className="menu-item block md:inline-block hover-navbar no-underline text-grey-darkest hover:text-grey-darker font-semibold uppercase mb-1 hover:text-accent transition-all" to="/threejs">Three</Link> 
-                    <Link className="menu-item block md:inline-block hover-navbar no-underline text-grey-darkest hover:text-grey-darker font-semibold uppercase mb-1 hover:text-accent transition-all" to="/">Web3</Link>
                     </p>
                   </div>
                 </div>

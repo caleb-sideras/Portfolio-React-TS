@@ -210,9 +210,11 @@ export const Points: FC<Props1> = ({ bufferRefPoints, bufferRefColor, bufferRefP
 
             }
 
-            
+            {/* @ts-ignore  */ }
             bufferRefPos.current.needsUpdate = true;
+            {/* @ts-ignore  */ }
             bufferRefColor.current.needsUpdate = true;
+            {/* @ts-ignore  */ }
             bufferRefPoints.current.needsUpdate = true;
         }
     })

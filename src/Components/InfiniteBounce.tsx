@@ -47,11 +47,11 @@ export const Plane: FC = () => {
 }
 
 export const InstancedSpheres: FC = () => {    
-    const [ref, api] = useBox(() => ({ mass: 500, position: [4 - Math.random() * 4, 10, 0, 0] }))
+    const [ref2, api] = useBox(() => ({ mass: 500, position: [4 - Math.random() * 4, 10, 0, 0] }))
     
+    // BufferGeometry not working with count. Might be an OpenGl issue
     return (
-        // BufferGeometry not working with count. Might be an OpenGl issue
-        <mesh onClick={() => { api.velocity.set(0, 50, 5) }} ref={ref} position={[0, 2, 0]} >
+        <mesh onClick={() => { api.velocity.set(0, 50, 5) }} ref={ref2} position={[0, 2, 0]} >
             <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
             <meshBasicMaterial attach="material" color={"#ffffff"} wireframe={true} />
         </mesh>
@@ -62,10 +62,15 @@ export const Borders: FC =() => {
     return (
         <>
             {/* bottom, left, right, close, far */}
+            {/* @ts-ignore  */}
             <Plane2 position={[0, -10, 0]} rotation={[-Math.PI / 2, 0, 0]} />
+            {/* @ts-ignore  */}
             <Plane2 position={[-10, 0, 0]} rotation={[0, Math.PI / 2, 0]} />
+            {/* @ts-ignore  */}
             <Plane2 position={[10, 0, 0]} rotation={[0, -Math.PI / 2, 0]} />
+            {/* @ts-ignore  */}
             <Plane2 position={[0, 0, -1]} rotation={[0, 0, 0]} />
+            {/* @ts-ignore  */}
             <Plane2 position={[0, 0, 12]} rotation={[0, -Math.PI, 0]} />
         </>
     )

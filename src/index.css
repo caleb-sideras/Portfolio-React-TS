@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import "bootstrap/dist/css/bootstrap.css"; */
 
 
 :root{
@@ -43,16 +42,6 @@
   .filter-wha{
     filter: invert(97%) sepia(1%) saturate(79%) hue-rotate(323deg) brightness(114%) contrast(100%);
   }
-  /* .menu-item:hover + .menu-drop{
-    @apply absolute !important;
-  } */
-  /* .loading-fade{
-    @apply opacity-0 transition-all duration-75 ease-linear;
-  } */
-
-  /* .loading-fade-in{
-    @apply animation.fade-in;
-  } */
 }
 
 .navbar-height{
@@ -133,145 +122,3 @@
     top: 0;
   }
 }
-
-
-
-
-
-
-.svg-wrapper {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
-  /* width: 320px;   */
-}
-.shape {
-  /* stroke-dasharray: 10 50;  = 10 width line, 50 width gap*/
-  /* 680 = 320*2 = 640 + 60*2 = 760 */
-  /* 140+540=680 */
-  /* stroke-dasharray: 140 540;   */
-  /* stroke-dashoffset: -474; */
-
-  stroke-dasharray: 0 760;
-  stroke-width: 8px;
-  fill: transparent;
-  stroke: #ffffff;
-  border-bottom: 5px solid black;
-  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-}
-/* .text {
-  font-family: 'Roboto Condensed';
-  font-size: 22px;
-  line-height: 32px;
-  letter-spacing: 8px;
-  color: #fff;
-  top: -48px;
-  position: relative;
-} */
-.svg-wrapper:hover .shape {
-  /* stroke-width: 8px; */
-  /* stroke-dashoffset: 0; */
-  stroke-dasharray: 760;
-}
-
- .geeks {
-            left: 40%;
-            top: 40%;
-            position: absolute;
-  
-            width: 300px;
-            text-align: center;
-        }
-  
-        h1 {
-            position: relative;
-        }
-  
-        .geeks::before {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            width: 0;
-            height: 0;
-            background: transparent;
-            border: 2px solid transparent;
-        }
-  
-        .geeks:hover::before {
-            animation: animate 1s linear forwards;
-        }
-  
-        @keyframes animate {
-            0% {
-                width: 0;
-                height: 0;
-                border-top-color: black;
-                border-right-color: transparent;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-            }
-  
-            50% {
-                width: 100%;
-                height: 0;
-                border-top-color: black;
-                border-right-color: black;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-            }
-  
-            100% {
-                width: 100%;
-                height: 100%;
-                border-top-color: black;
-                border-right-color: black;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-            }
-        }
-  
-        .geeks::after {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            width: 0;
-            height: 0;
-            background: transparent;
-            border: 2px solid transparent;
-        }
-  
-        .geeks:hover::after {
-            animation: animates 1s linear forwards;
-        }
-  
-        @keyframes animates {
-            0% {
-                width: 0;
-                height: 0;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: transparent;
-                border-left-color: black;
-            }
-  
-            50% {
-                width: 0;
-                height: 100%;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: black;
-                border-left-color: black;
-            }
-  
-            100% {
-                width: 100%;
-                height: 100%;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: black;
-                border-left-color: black;
-            }
-        }

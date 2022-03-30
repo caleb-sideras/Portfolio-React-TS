@@ -20,6 +20,7 @@ export const AudioAdd: FC<Props> = ({ audio, setAudio }) => {
                 type="file" 
                 name="mp3" 
                 accept='audio/mp3'
+                /* @ts-ignore  */
                 onChange={(e) => setAudio(e.target.files[0])} 
                 ref={inputRef}
             />
