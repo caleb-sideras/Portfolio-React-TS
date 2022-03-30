@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "bootstrap/dist/css/bootstrap.css"; */
+
+
+:root{
+  background-color: theme('colors.color_primary');
+  color: theme('colors.text_primary');
+  --navbar-height: 100px;
+}
+
+@layer components{
+  .button-icon{
+    @apply w-14 h-14 flex m-auto;
+  }
+  .button-icon-left{
+    @apply w-14 h-14 flex;
+  }
+  .button-icon-active{
+    @apply hover:cursor-pointer filter hover:fill-accent icon-hover-transition;
+  }
+
+  .slider-thumb::-webkit-slider-thumb {
+    @apply appearance-none w-6 h-6 rounded-full bg-text_primary cursor-pointer border-color_primary border-4 border-solid;
+  }
+
+  .slider-thumb::-webkit-slider-thumb:hover {
+    @apply bg-accent icon-hover-transition;
+  }
+
+  .icon-hover-transition{
+    @apply transition-all duration-75 ease-linear
+  }
+
+  .hover-navbar:hover + div{
+    @apply border-b-4 icon-hover-transition;
+  }
+
+  .max-w-40{
+    max-width: 10rem;
+  }
+  .filter-wha{
+    filter: invert(97%) sepia(1%) saturate(79%) hue-rotate(323deg) brightness(114%) contrast(100%);
+  }
+  /* .menu-item:hover + .menu-drop{
+    @apply absolute !important;
+  } */
+  /* .loading-fade{
+    @apply opacity-0 transition-all duration-75 ease-linear;
+  } */
+
+  /* .loading-fade-in{
+    @apply animation.fade-in;
+  } */
+}
+
+.navbar-height{
+  min-height: var(--navbar-height);
+}
+
+.fill-height{
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+
+@media (max-width: 767px) {
+
+
+  .text-adjust-center{
+    text-align: center !important;
+  }
+   .text-adjust-right{
+    text-align: right !important;
+  }
+
+  .div-adjust{
+    justify-content: center !important;
+  }
+
+  .navbar-height{
+    min-height: auto !important;
+    align-items: center !important;
+    justify-content: end !important;
+  }
+
+  .navicon {
+    width: 1.125em;
+    height: .125em;
+  }
+
+  .navicon::before,
+  .navicon::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-out;
+    content: '';
+    background: #3D4852;
+  }
+
+  .navicon::before {
+    top: 5px;
+  }
+
+  .navicon::after {
+    top: -5px;
+  }
+
+  .menu-btn:not(:checked) ~ .menu {
+    display: none;
+  }
+
+  .menu-btn:checked ~ .menu {
+    display: block;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::before,
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0;
+  }
+}
+
+
+
+
+
+
+.svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  /* width: 320px;   */
+}
+.shape {
+  /* stroke-dasharray: 10 50;  = 10 width line, 50 width gap*/
+  /* 680 = 320*2 = 640 + 60*2 = 760 */
+  /* 140+540=680 */
+  /* stroke-dasharray: 140 540;   */
+  /* stroke-dashoffset: -474; */
+
+  stroke-dasharray: 0 760;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #ffffff;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+/* .text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -48px;
+  position: relative;
+} */
+.svg-wrapper:hover .shape {
+  /* stroke-width: 8px; */
+  /* stroke-dashoffset: 0; */
+  stroke-dasharray: 760;
+}
+
+ .geeks {
+            left: 40%;
+            top: 40%;
+            position: absolute;
+  
+            width: 300px;
+            text-align: center;
+        }
+  
+        h1 {
+            position: relative;
+        }
+  
+        .geeks::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+  
+        .geeks:hover::before {
+            animation: animate 1s linear forwards;
+        }
+  
+        @keyframes animate {
+            0% {
+                width: 0;
+                height: 0;
+                border-top-color: black;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+  
+            50% {
+                width: 100%;
+                height: 0;
+                border-top-color: black;
+                border-right-color: black;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+  
+            100% {
+                width: 100%;
+                height: 100%;
+                border-top-color: black;
+                border-right-color: black;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+        }
+  
+        .geeks::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+  
+        .geeks:hover::after {
+            animation: animates 1s linear forwards;
+        }
+  
+        @keyframes animates {
+            0% {
+                width: 0;
+                height: 0;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: black;
+            }
+  
+            50% {
+                width: 0;
+                height: 100%;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: black;
+                border-left-color: black;
+            }
+  
+            100% {
+                width: 100%;
+                height: 100%;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: black;
+                border-left-color: black;
+            }
+        }
