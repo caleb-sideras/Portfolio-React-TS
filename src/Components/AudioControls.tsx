@@ -25,6 +25,7 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
     const [isDistortConnect, setIsDistortConnect] = useState<boolean>(false)
     const [feedback, setFeedback] = useState<number | string>(activeAudio?.distortion as number)
     const [delay, setDelay] = useState<number | string>(activeAudio?.distortion as number)
+    const [p5Object, setp5Object] = useState<any>(undefined)
     
     
     const pitchValueRef = useRef<HTMLInputElement | null>(null)
@@ -36,13 +37,13 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
     const reverbValueRef = useRef<HTMLInputElement | null>(null)
     const reverbSliderRef = useRef<HTMLInputElement | null>(null)
     const frequencyValueRef = useRef<HTMLInputElement | null>(null)
+    const controlRef = useRef<HTMLDivElement | null>(null)
 
 
     const [isLoaded, setIsLoaded] = useState<boolean>(false)
     const isMounted = useRef<boolean>()
     // shifter init
     shifter.wet.value = 1
-    
     
     // const pitchShift = new Tone.PitchShift().toDestination();
     // const osc = new Tone.Oscillator().connect(pitchShift).start().toDestination();
@@ -69,14 +70,22 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
         isPlay ? playSound() : pause()
     }, [isPlay])
 
-    useEffect(() => {
-        // shifter.pitch = pitch as number
-        console.log(shifter.pitch)
-    }, [shifter])
+    // useEffect(() => {
+    //     // shifter.pitch = pitch as number
+    // }, [shifter])
 
     useEffect(() => {
         distortioner.distortion = distortion as number
     }, [distortion])
+
+    useEffect(() => {
+        if (controlRef.current) {
+            if(p5Object){
+                // p5Object.setVolume(0.1)
+                p5Object.resizeCanvas(controlRef.current?.clientWidth, controlRef.current?.clientHeight as number / 2)
+            }
+        }
+    }, [p5Object]);
 
     //not working
     // useEffect(() => {
@@ -103,7 +112,6 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
 
     }, [])
     
-
 
     const handleOnChangePitch = (e: React.ChangeEvent<HTMLInputElement>) => { 
         if (pitchValueRef.current?.value != null){
@@ -171,21 +179,24 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
     //     player.connect(feedbackDelayer);
     // }
 
-    console.log("shift " + shifter.pitch)
-    console.log("distortion " + distortioner.distortion)
-    // console.log("feedback " + feedback)
-    // console.log("delay " + delay)
-    console.log("reverb" + reverber.decay)
+
 
     //IDEA use refs until you save the state, could elimate those glitching issues.
     // issue when delay set to zero, king :)
 
     const setup = (p5:any, canvasParentRef:any) => {
-        p5.createCanvas(500, 130).parent(canvasParentRef)
+        setp5Object(p5)
+        p5.createCanvas(0,132).parent(canvasParentRef)
+       
     }
+
+    const resize = (p5: any) => {
+        p5.resizeCanvas(controlRef.current?.clientWidth, controlRef.current?.clientHeight as number /2)
+    }
+
     const draw = (p5:any) => {
         p5.background(34, 34, 34); //150
-        const dim = Math.min(500, 130);
+        const dim = Math.min(controlRef.current?.clientWidth as number, controlRef.current?.clientHeight as number / 2);
         p5.strokeWeight(dim * 0.01); //0.0025
         p5.stroke(255); //#ffffff
         p5.noFill();
@@ -196,8 +207,8 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
             p5.beginShape();
             for (let i = 0; i < values.length; i++) {
                 const amplitude: number  = values[i] as number;
-                const x = p5.map(i, 0, values.length - 1, 0, 500);
-                const y = 130 / 2 + amplitude * 130;
+                const x = p5.map(i, 0, values.length - 1, 0, controlRef.current?.clientWidth as number);
+                const y = controlRef.current?.clientHeight as number / 4 + amplitude * (controlRef.current?.clientHeight as number / 2);
                 // Place vertex
                 p5.vertex(x, y);
             }
@@ -209,14 +220,14 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
 
     return (
         <div className='flex flex-col w-full px-4'>
-            <div className='flex flex-col'>
+            <div className='flex flex-col' ref={controlRef}>
 
                 <div className='flex flex-col'>
                     <div>
                         <span>Pitch: </span>
                         <output ref={pitchValueRef} className='w-8 text-center text-accent font-bold' id="slider_value" >0</output>
                     </div>
-                    <input ref={pitchSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0} max={12} min={-12} onMouseUp={() => shifter.pitch = parseInt(pitchSliderRef.current?.value as string)} step={1} onChange={handleOnChangePitch} />
+                    <input ref={pitchSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0} max={12} min={-12} onPointerUp={() => shifter.pitch = parseInt(pitchSliderRef.current?.value as string)} step={1} onChange={handleOnChangePitch} />
                 </div>
 
                 <div className='flex flex-col'>
@@ -224,7 +235,7 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
                         <span>Distortion: </span>
                         <output ref={distortionValueRef} className='w-8 text-center text-accent font-bold' id="slider_value" >0</output>
                     </div>
-                    <input ref={distortionSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0} max={1} min={0} onMouseUp={() => distortioner.distortion = parseFloat(distortionSliderRef.current?.value as string)} step={0.05} onChange={handleOnChangeDistortion} />
+                    <input ref={distortionSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0} max={1} min={0} onPointerUp={() => distortioner.distortion = parseFloat(distortionSliderRef.current?.value as string)} step={0.05} onChange={handleOnChangeDistortion} />
                 </div>
 
                 <div className='flex flex-col'>
@@ -232,9 +243,9 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
                         <span>Reverb: </span>
                         <output ref={reverbValueRef} className='w-8 text-center text-accent font-bold' id="slider_value" >0</output>
                     </div>
-                    <input ref={reverbSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0.001} max={100} min={0.001} onMouseUp={() => reverber.decay = parseFloat(reverbSliderRef.current?.value as string)} onChange={handleOnChangeReverb} />
+                    <input ref={reverbSliderRef} className='appearance-none w-full h-1 bg-white rounded outline-none slider-thumb my-2' type="range" name="" id="" defaultValue={0.001} max={100} min={0.001} onPointerUp={() => reverber.decay = parseFloat(reverbSliderRef.current?.value as string)} onChange={handleOnChangeReverb} />
                 </div>
-                <Sketch className="m-auto" setup={setup} draw={draw} />
+                <Sketch className="m-auto" setup={setup} draw={draw} windowResized={resize} />
 
                 {/* <div className='flex flex-col'>
                     <div>

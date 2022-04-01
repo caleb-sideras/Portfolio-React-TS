@@ -18,7 +18,6 @@ export const AudioWrapper: FC<Props> = (props) => {
 
     const handleAddAudio = (audio: File | null | undefined ) => {
         if (audio && audio.type=="audio/mpeg") {
-            console.log(audio)
             let tempAudio: Audio = {
                 id: Date.now(), audio: audio, pitch: 0, name: audio.name, distortion: 0, reverb: 0,
                 feedback: 0, delay: 0
@@ -28,7 +27,6 @@ export const AudioWrapper: FC<Props> = (props) => {
             setAdd(!add)
             setAudio(null)
             setIsActive(true)
-            console.log("AudioList Addition + Audio set NULL")
         }
         else{
             alert("Please upload an .mp3 file!")
