@@ -9,6 +9,11 @@ type Props = {
 }
 
 export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
+
+
+    // Insane refactor to all const and component based sliders!!!
+
+
     // Tone js init
     // const [tone, setTone] = useState<typeof Tone>(Tone)
     const [player, setplayer] = useState<Tone.Player>(new Tone.Player({ url: URL.createObjectURL(activeAudio?.audio as Blob), loop: true}))
@@ -69,6 +74,7 @@ export const AudioControls: FC<Props> = ({isPlay, activeAudio}) => {
     useEffect(() => {
         isPlay ? playSound() : pause()
     }, [isPlay])
+
 
     // useEffect(() => {
     //     // shifter.pitch = pitch as number

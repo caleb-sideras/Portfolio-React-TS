@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { FaVuejs } from 'react-icons/fa'
-import { SiAmazonaws, SiDart, SiDjango, SiFlutter, SiMysql, SiPython, SiWebpack } from 'react-icons/si'
+import { SiAmazonaws, SiCplusplus, SiDart, SiDjango, SiDotnet, SiFlutter, SiMysql, SiPython, SiWebpack } from 'react-icons/si'
 import { CgArrowTopRight } from 'react-icons/cg'
 
 type Props = {}
@@ -104,6 +104,42 @@ const Projects: React.FC = () => {
                     <a href="https://docs.cloud.coinbase.com/exchange/docs/welcome" className='underline' target='_blank'>Coinbase Pro</a>
                     <a href="https://phemex.com/user-guides/api-overview" className='underline' target='_blank'>Phemex</a>
                     
+                </span>
+            </div>
+            <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
+                <a href="https://github.com/caleb-sideras/ClientServerChatApp.git" target='_blank'>
+                    <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
+                        <span className='font-bold text-3xl my-8'>
+                            Client/Server Chat App</span>
+                        <CgArrowTopRight />
+                    </div>
+                </a>
+                <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Multi-Client/Server messaging application utilizing the Windows Sockets (WinSock) API. Clients can also issue commands ($getlog, $getlist etc) with the server logging both client commands and messages.</span>
+                <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
+                <div className='flex flex-row flex-wrap items-center gap-2'>
+                    <SiCplusplus className='button-icon-left' />
+                </div>
+                <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap'>
+                    Technologies/APIs:
+                    <a href="https://docs.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2" className='underline' target='_blank'>WinSock API</a>
+                </span>
+            </div>
+            <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
+                <a href="https://github.com/caleb-sideras/Saiph-Space-Game.git" target='_blank'>
+                    <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
+                        <span className='font-bold text-3xl my-8'>
+                            Saiph Space Game</span>
+                        <CgArrowTopRight />
+                    </div>
+                </a>
+                <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>The objective of the game is to survive while defeating all opponents. Enemy and level information is data driven via xml files. Once all levels are completed the game will restart at level zero.</span>
+                <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
+                <div className='flex flex-row flex-wrap items-center gap-2'>
+                    <SiDotnet className='button-icon-left'/>
+                </div>
+                <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap'>
+                    Technologies/APIs:
+                    <a href="https://docs.microsoft.com/en-us/dotnet/" className='underline' target='_blank'>.NET</a>
                 </span>
             </div>
         </div>
