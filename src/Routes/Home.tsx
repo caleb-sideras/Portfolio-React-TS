@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
-import { SiDjango, SiTypescript, SiJavascript, SiPython, SiSolidity, SiDart, SiCsharp, SiMysql, SiAmazonaws, SiEthereum, SiLinkedin, SiGithub, SiFlutter  } from 'react-icons/si'
+import { SiDjango, SiTypescript, SiJavascript, SiPython, SiSolidity, SiDart, SiCsharp, SiMysql, SiAmazonaws, SiEthereum, SiLinkedin, SiGithub, SiFlutter, SiNodedotjs, SiCplusplus  } from 'react-icons/si'
 import { DiReact } from 'react-icons/di'
 import { FaVuejs } from 'react-icons/fa'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -58,10 +58,11 @@ const Home: React.FC = () => {
 
             <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn">
                 <div className='grid grid-cols-2 justify-center items-start'>
-                    <span className='text-xl mt-3'>Dev-Environments:</span>
+                    <span className='text-xl mt-3'>Frameworks/Environments:</span>
                     <div className='flex flex-row gap-4 flex-wrap'>
                         <SiDjango className='button-icon-left' />
                         <SiFlutter className='button-icon-left' />
+                        <SiNodedotjs className='button-icon-left' />
                     </div>
                 </div>
             </AnimationOnScroll>
@@ -76,6 +77,7 @@ const Home: React.FC = () => {
                         <SiSolidity className='button-icon-left' />
                         <SiDart className='button-icon-left' />
                         <SiCsharp className='button-icon-left' />
+                        <SiCplusplus className='button-icon-left' />
                     </div>
                 </div>
             </AnimationOnScroll>
