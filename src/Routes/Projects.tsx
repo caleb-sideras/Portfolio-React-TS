@@ -18,9 +18,9 @@ const Projects: React.FC = () => {
                 </div>
             </a>
 
-            <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>A web3 platform that enables artists to prototype, create, mint and sell NFT collections from the Ethereum or Polygon Blockchains.</span>
+            <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>A web3 platform that enables artists to create, deploy and mint generative NFT collections to the Ethereum or Polygon blockchains.</span>
             <span className='text-xl font-bold text-center w-full py-4'>Roles</span>
-            <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Co-Founder, Full Stack Developer, Web3/Solidity Developer, UI/UX designer.</span>
+            <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Full Stack Developer, Web3/Solidity Developer, UI/UX designer.</span>
             <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
             <div className='grid grid-cols-2 justify-center text-left w-72'>
                 <span className='text-xl mt-3'>Front-end:</span>

@@ -97,7 +97,7 @@ const Home: React.FC = () => {
             <div className='grid max-w-4xl px-4 py-8 gap-4'>
                 <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4'>
                     <span className='font-bold text-3xl my-8 text-accent'>About</span>
-                        <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>A Computer Science Senior who is obsessed with Web3 and wants to get immersed in the corporate Software Engineering landscape. Has developed and currently maintains a Web3 platform with an active userbase. Willing to learn anything!</span>
+                        <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Hardworking and passionate Computer Science graduate with a strong Full Stack and Web3 background eager to secure an entry-level Software Engineer position. Ready to help achieve company goals and willing to work above and beyond the requirements.</span>
                         <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn" className='text-left w-full text-accent flex flex-col'>
                             <span>caleb.sideras@oulook.com</span>
                             <span>+1 (617) 480 1896</span>
