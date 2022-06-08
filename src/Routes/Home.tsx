@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div>
-                    <img src="https://www.genera.link/static/Assets/About/caleb_sideras_pic.png" alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
+                        <img src="https://lh3.googleusercontent.com/gupAwUeRpLCaJVWGyr_Px7N1E5_iPiSv1ZrSGsjdIgePSkyh9EHUlaASCzLHRBlu9tt8CDeNDxHdJOnqO2390C4BmhTXxjJIkueQLQ1UMVwK73fUQVqxMUgS4P5jft6TVU1ecxuuNHBzDncJ6GPZm4j36ejv3-LeiOiQvTgdTxneMh9eCIz9U9LPkWoknvEDoJNVRcjEvElvxiCT1q-uUgpvwA-ZYDxir3P97Ts5cuBJjRzdWMquAT8uN3A3IS09T1SS5grCt9a9rcUli17EwlXhpRlBK-IDlVQbW3lPOTwyuLOeypBmxd8qC2yoy_6O38nlrIbL0NDuIZq2JRDvSsLwuX8CU4wNTDhcw1y9lKtBaI7Xzndr6a9Vuusv_CYmOo2ZC2iffnxkn3wD619QXHnPwoIg0yoAWqajeRSA2RQcliDExchN-6sUFnE_VWwjLVS-QQvZpljXCwCGY6WWqI83FdZqM67qzcE9Hi5ICwjhb4ANj6xh-64gqfXInzrBGdgxrjTlV27zfT724ZeIusHhmLpDA4co7m1f--mvg9GDYqw0X_zOOWJRK9vC4i0oaOX3VVdRRvsGV-aqOSzKB7hgYzUgkFDrJ83NF0Az26RbzSXZNiv8ywecmwwgkIMEem6P1g-63BV5T0Nkm3GFs3Rp41HfZWYadGvkOPQCyeyJ2S7sZJmOJCl6ODePYe_t_dfal8y0aVQbC-bGNzgiusCSyyPo2y131oZewBUSdsC2VViMbhmOp1O4vEWRkxRTa6Dg2bmjcGdKqkY9FJsmUwG19465-x83pgETHY20LiAFe1rk6QD321kmFoSfKZ3XPn-6XH0=s933-no?authuser=1" alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
                     <div className='flex flex-row gap-4 flex-wrap max-w-40 justify-center w-40'>
                         <a href="https://www.linkedin.com/in/caleb-sideras-9555b0196/" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <SiLinkedin className='h-6 w-6' />
@@ -31,9 +31,9 @@ const Home: React.FC = () => {
                         <a href="https://github.com/caleb-sideras" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <SiGithub className='h-6 w-6' />
                         </a>
-                            <a href="https://www.genera.link/" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
+                        {/* <a href="https://www.genera.link/" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <img src="https://www.genera.link/static/icons/logoV1.svg" alt="genera_icon" className='h-6 w-6' />
-                        </a>
+                        </a> */}
                         <a href="https://blockscan.com/address/0x36aCd77CA5bF2c84C0a60786581b322546d68193" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <SiEthereum className='h-6 w-6' />
                         </a>     

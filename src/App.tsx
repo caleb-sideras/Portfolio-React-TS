@@ -28,7 +28,7 @@ const App: React.FC = () => {
             </li>
 
             <li className="md:border-none">
-              <Link className="block md:inline-block px-4 hover-navbar pt-3 no-underline text-grey-darkest hover:text-grey-darker font-semibold uppercase" to="/projects">Experience/Projects</Link>
+            <Link className="block md:inline-block px-4 hover-navbar pt-3 no-underline text-grey-darkest hover:text-grey-darker font-semibold uppercase" to="/projects">Experience/Projects</Link>
               <div className="h-1"></div>
             </li>
 

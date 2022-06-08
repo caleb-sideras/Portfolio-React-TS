@@ -11,12 +11,13 @@ const Projects: React.FC = () => {
 
         <div className='py-8 flex flex-col gap-8'>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
-            <a href="https://genera.link" target='_blank'>
-                <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
+            {/* <a href="https://genera.link" target='_blank'> */}
+                {/* hover:text-accent transition-all */}
+                <div className='flex flex-row items-center ml-2'>
                     <span className='font-bold text-3xl my-8 '>Genera</span>
-                    <CgArrowTopRight />
+                    {/* <CgArrowTopRight /> */}
                 </div>
-            </a>
+            {/* </a> */}
 
             <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>A web3 platform that enables artists to create, deploy and mint generative NFT collections to the Ethereum or Polygon blockchains.</span>
             <span className='text-xl font-bold text-center w-full py-4'>Roles</span>
