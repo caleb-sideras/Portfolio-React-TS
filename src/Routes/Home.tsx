@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
-import { SiDjango, SiTypescript, SiJavascript, SiPython, SiSolidity, SiDart, SiCsharp, SiMysql, SiAmazonaws, SiEthereum, SiLinkedin, SiGithub, SiFlutter, SiNodedotjs, SiCplusplus  } from 'react-icons/si'
+import { SiDjango, SiTypescript, SiJavascript, SiPython, SiSolidity, SiDart, SiCsharp, SiMysql, SiAmazonaws, SiEthereum, SiLinkedin, SiGithub, SiFlutter, SiNodedotjs, SiCplusplus, SiJava, SiAndroid  } from 'react-icons/si'
 import { DiReact } from 'react-icons/di'
 import { FaVuejs } from 'react-icons/fa'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div>
-                        <img src="https://lh3.googleusercontent.com/gupAwUeRpLCaJVWGyr_Px7N1E5_iPiSv1ZrSGsjdIgePSkyh9EHUlaASCzLHRBlu9tt8CDeNDxHdJOnqO2390C4BmhTXxjJIkueQLQ1UMVwK73fUQVqxMUgS4P5jft6TVU1ecxuuNHBzDncJ6GPZm4j36ejv3-LeiOiQvTgdTxneMh9eCIz9U9LPkWoknvEDoJNVRcjEvElvxiCT1q-uUgpvwA-ZYDxir3P97Ts5cuBJjRzdWMquAT8uN3A3IS09T1SS5grCt9a9rcUli17EwlXhpRlBK-IDlVQbW3lPOTwyuLOeypBmxd8qC2yoy_6O38nlrIbL0NDuIZq2JRDvSsLwuX8CU4wNTDhcw1y9lKtBaI7Xzndr6a9Vuusv_CYmOo2ZC2iffnxkn3wD619QXHnPwoIg0yoAWqajeRSA2RQcliDExchN-6sUFnE_VWwjLVS-QQvZpljXCwCGY6WWqI83FdZqM67qzcE9Hi5ICwjhb4ANj6xh-64gqfXInzrBGdgxrjTlV27zfT724ZeIusHhmLpDA4co7m1f--mvg9GDYqw0X_zOOWJRK9vC4i0oaOX3VVdRRvsGV-aqOSzKB7hgYzUgkFDrJ83NF0Az26RbzSXZNiv8ywecmwwgkIMEem6P1g-63BV5T0Nkm3GFs3Rp41HfZWYadGvkOPQCyeyJ2S7sZJmOJCl6ODePYe_t_dfal8y0aVQbC-bGNzgiusCSyyPo2y131oZewBUSdsC2VViMbhmOp1O4vEWRkxRTa6Dg2bmjcGdKqkY9FJsmUwG19465-x83pgETHY20LiAFe1rk6QD321kmFoSfKZ3XPn-6XH0=s933-no?authuser=1" alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
+                        <img src="./src/profile_picture.jpg" alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
                     <div className='flex flex-row gap-4 flex-wrap max-w-40 justify-center w-40'>
                         <a href="https://www.linkedin.com/in/caleb-sideras-9555b0196/" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <SiLinkedin className='h-6 w-6' />
@@ -58,9 +58,10 @@ const Home: React.FC = () => {
 
             <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn">
                 <div className='grid grid-cols-2 justify-center items-start'>
-                    <span className='text-xl mt-3'>Frameworks/Environments:</span>
+                    <span className='text-xl mt-3'>Environments:</span>
                     <div className='flex flex-row gap-4 flex-wrap'>
                         <SiDjango className='button-icon-left' />
+                        <SiAndroid className='button-icon-left' />
                         <SiFlutter className='button-icon-left' />
                         <SiNodedotjs className='button-icon-left' />
                     </div>
@@ -74,6 +75,7 @@ const Home: React.FC = () => {
                         <SiTypescript className='button-icon-left' />
                         <SiJavascript className='button-icon-left' />
                         <SiPython className='button-icon-left' />
+                        <SiJava className='button-icon-left' />
                         <SiSolidity className='button-icon-left' />
                         <SiDart className='button-icon-left' />
                         <SiCsharp className='button-icon-left' />
@@ -97,7 +99,7 @@ const Home: React.FC = () => {
             <div className='grid max-w-4xl px-4 py-8 gap-4'>
                 <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4'>
                     <span className='font-bold text-3xl my-8 text-accent'>About</span>
-                        <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Hardworking and passionate Computer Science graduate with a strong Full Stack and Web3 background eager to secure an entry-level Software Engineer position. Ready to help achieve company goals and willing to work above and beyond the requirements.</span>
+                        <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Detail-oriented Computer Science graduate with a passion for learning new technologies and solving difficult engineering challenges. Values writing structured code with a strong emphasis on scalability and readability.</span>
                         <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn" className='text-left w-full text-accent flex flex-col'>
                             <span>caleb.sideras@oulook.com</span>
                             <span>+1 (617) 480 1896</span>
