@@ -5,6 +5,7 @@ import { DiReact } from 'react-icons/di'
 import { FaVuejs } from 'react-icons/fa'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { OpenUniverse } from '../Components/OpenUniverse'
+import profile from './src/profile_picture.jpg'
 
 const Home: React.FC = () => {
     return (
@@ -23,7 +24,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div>
-                        <img src="./src/profile_picture.jpg" alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
+                        <img src={profile} alt="Caleb Picture" className="rounded-full max-h-40 max-w-40 mb-4 z-10"></img>
                     <div className='flex flex-row gap-4 flex-wrap max-w-40 justify-center w-40'>
                         <a href="https://www.linkedin.com/in/caleb-sideras-9555b0196/" target="_blank" rel="noopener noreferrer" className='text-xl font-bold'>
                             <SiLinkedin className='h-6 w-6' />
