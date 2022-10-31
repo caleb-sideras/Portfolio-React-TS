@@ -5,7 +5,7 @@ import { DiReact } from 'react-icons/di'
 import { FaVuejs } from 'react-icons/fa'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { OpenUniverse } from '../Components/OpenUniverse'
-import profile from './src/profile_picture.jpg'
+import profile from '../profile_picture.jpg'
 
 const Home: React.FC = () => {
     return (
