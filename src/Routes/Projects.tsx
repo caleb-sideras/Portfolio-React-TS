@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { FaVuejs } from 'react-icons/fa'
-import { SiAmazonaws, SiCplusplus, SiDart, SiDjango, SiDotnet, SiFlutter, SiMysql, SiPython, SiWebpack } from 'react-icons/si'
+import { SiAmazonaws, SiCplusplus, SiDart, SiDjango, SiDotnet, SiFlutter, SiMicrosoftbing, SiMysql, SiOpenai, SiPython, SiReact, SiTypescript, SiWebpack } from 'react-icons/si'
 import { CgArrowTopRight } from 'react-icons/cg'
 
 type Props = {}
@@ -10,6 +10,34 @@ const Projects: React.FC = () => {
     return (
 
         <div className='py-8 flex flex-col gap-8'>
+            <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
+                <a href="https://aipeoplepedia.com/" target='_blank'>
+                    <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
+                        <span className='font-bold text-3xl my-8'>People Pedia</span>
+                        <CgArrowTopRight />
+                    </div>
+                </a>
+                <span className='text-xl font-light text-center w-full pb-4 text-adjust-center '>AI powered search that summarizes and visualizes information for anyone who has data on the internet.</span>
+                <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
+                    <div className='flex flex-row flex-wrap items-center gap-2'>
+                        <SiReact className='button-icon-left' />
+                        +
+                        <SiTypescript className='button-icon-left' />
+                    </div>
+                    {/* <div className='flex flex-row flex-wrap items-center gap-2'>
+                        <SiOpenai className='button-icon-left' />
+                        +
+                        <SiMicrosoftbing className='button-icon-left' />
+                    </div> */}
+                    <div className='flex flex-row flex-wrap items-center gap-2 mt-4'>
+                        <SiDjango className='button-icon-left' />
+                    </div>
+                <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap'>
+                    Technologies/APIs:
+                    <a href="https://platform.openai.com/docs/api-reference/completions" className='underline' target='_blank'>OpenAI GPT-3.5</a>
+                    <a href="https://www.microsoft.com/en-us/bing/apis/bing-web-search-api" className='underline' target='_blank'>Bing Web Search</a>
+                </span>
+            </div>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
                 <a href="https://github.com/caleb-sideras/Stagger-Flutter-App" target='_blank'>
                     <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>

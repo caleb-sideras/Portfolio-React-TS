@@ -100,8 +100,8 @@ const Home: React.FC = () => {
             <div className='grid max-w-4xl px-4 py-8 gap-4'>
                 <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4'>
                     <span className='font-bold text-3xl my-8 text-accent'>About</span>
-                        <span className='text-xl font-light text-left w-full pb-4 text-adjust-center'>Detail-oriented Computer Science graduate with a passion for learning new technologies and solving difficult engineering challenges. Values writing structured code with a strong emphasis on scalability and readability.</span>
-                        <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn" className='text-left w-full text-accent flex flex-col'>
+                        <span className='text-xl font-light w-full pb-4 text-center'>Detail-oriented Junior Developer that prioritizes value creation through solving difficult engineering challenges. Values writing structured code with a strong emphasis on scalability and readability. Looking forward to creating novel solutions with the possibility of integrating Web3 technologies.</span>
+                        <AnimationOnScroll delay={0.1} duration={1} animateOnce={true} initiallyVisible={false} animateIn="animate__fadeIn" className='text-center w-full text-accent flex flex-col'>
                             <span>caleb.sideras@oulook.com</span>
                             <span>+1 (617) 480 1896</span>
                         </AnimationOnScroll>
