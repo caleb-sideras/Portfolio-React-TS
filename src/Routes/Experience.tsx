@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
                     <div className='flex-row mt-2'>
                         <span className='text-2xl'>Echelon</span>
                         &nbsp; - &nbsp;
-                        <span className='text-2xl'>Part-time</span>
+                        <span className='text-2xl'>Full-Time co-op</span>
                     </div>
                     {/* <CgArrowTopRight /> */}
                 </div>
