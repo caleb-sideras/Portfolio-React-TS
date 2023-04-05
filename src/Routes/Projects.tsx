@@ -11,13 +11,13 @@ const Projects: React.FC = () => {
 
         <div className='py-8 flex flex-col gap-8'>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
-                <a href="https://github.com/caleb-sideras/Tweetailyze" target='_blank'>
+                <a href="https://tweetailyze-frontend.vercel.app/" target='_blank'>
                     <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
                         <span className='font-bold text-3xl my-8'>Tweetailyze</span>
                         <CgArrowTopRight />
                     </div>
                 </a>
-                <span className='text-xl font-light text-center w-full pb-4 text-adjust-center '>An API that provides Twitter account summarization through embedding/clustering of tweets, and then performing sentiment analysis and topic modeling.</span>
+                <span className='text-xl font-light text-center w-full pb-4 text-adjust-center '>A web app that performs Twitter account summarization through tweet embedding, clustering, sentiment analysis and topic modeling.</span>
                 <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
                     <div className='flex flex-row flex-wrap items-center gap-2'> 
                         <SiDocker className='button-icon-left' />
@@ -31,14 +31,11 @@ const Projects: React.FC = () => {
                         <SiRedis className='button-icon-left' />
                     </div>
                     <div className='flex flex-row flex-wrap items-center gap-2 mt-4'>
-                        <SiPytorch className='button-icon-left' />
-                        +
                         <SiOpenai className='button-icon-left' />
                     </div>
                 <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap justify-center'>
                     Other:
                     <a href="https://github.com/cjhutto/vaderSentiment" className='underline' target='_blank'>VADER-Sentiment-Analysis</a>
-                    <a href="https://huggingface.co/bert-base-multilingual-cased" className='underline' target='_blank'>BBERT multilingual base model</a>
                     <a href="https://www.nltk.org/" className='underline' target='_blank'>Natural Language Toolkit</a>
                     <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html" className='underline' target='_blank'>Non-Negative Matrix Factorization</a>
                     <a href="https://www.pgadmin.org/" className='underline' target='_blank'>pgAdmin</a>
