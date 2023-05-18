@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
                 </span>
             </div>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
-                <a href="https://aipeoplepedia.com/" target='_blank'>
+                <a href="https://github.com/caleb-sideras/PeoplePedia-Backend" target='_blank'>
                     <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
                         <span className='font-bold text-3xl my-8'>People Pedia</span>
                         <CgArrowTopRight />
