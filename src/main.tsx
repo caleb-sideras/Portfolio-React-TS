@@ -7,6 +7,7 @@ import Audio from './Routes/Audio'
 import ThreeJS  from './Routes/ThreeJS'
 import Projects from './Routes/Projects'
 import Experience from './Routes/Experience'
+import Videos from './Routes/Videos'
 import {
   BrowserRouter,
   Routes,
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="audio" element={<Audio />} />
           <Route path="experience" element={<Experience />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="videos" element={<Videos />} />
           <Route path="threejs" element={<ThreeJS />} />
         </Route>
       </Routes>
