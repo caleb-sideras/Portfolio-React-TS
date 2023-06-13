@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
 
         <div className='py-8 flex flex-col gap-8'>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
-                <a href="https://music-gpt.vercel.app/" target='_blank'>
+                <a href="https://music-gpt.xyz/" target='_blank'>
                     <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
                         <span className='font-bold text-3xl my-8'>MusicGPT</span>
                         <CgArrowTopRight />
