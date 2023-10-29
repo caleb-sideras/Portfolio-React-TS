@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { FaVuejs } from 'react-icons/fa'
-import { SiAmazonaws, SiAndroid, SiBreaker, SiCplusplus, SiDart, SiDjango, SiDotnet, SiFlutter, SiJava, SiMaterialui, SiMysql, SiPython, SiWebpack, SiXaml } from 'react-icons/si'
+import { SiAmazonaws, SiAndroid, SiBreaker, SiCplusplus, SiDart, SiDjango, SiDotnet, SiFlutter, SiMysql, SiPython, SiWebpack, SiXaml } from 'react-icons/si'
 import { CgArrowsBreakeH, CgArrowTopRight } from 'react-icons/cg'
+import { DiJava } from 'react-icons/di'
 
 type Props = {}
 
@@ -36,7 +37,7 @@ const Projects: React.FC = () => {
                     <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
                         <SiAndroid className='button-icon-left' />
                         +
-                        <SiJava className='button-icon-left' />
+                        <DiJava className='button-icon-left' />
                     </div>
                 </div>
                 <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap'>

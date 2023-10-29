@@ -3,6 +3,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { FaVuejs } from 'react-icons/fa'
 import { SiAmazonaws, SiCelery, SiCplusplus, SiDart, SiDjango, SiDocker, SiDotnet, SiFastapi, SiFlutter, SiMicrosoftbing, SiMysql, SiNextdotjs, SiOpenai, SiPostgresql, SiPython, SiPytorch, SiReact, SiRedis, SiTypescript, SiVercel, SiWebpack } from 'react-icons/si'
 import { CgArrowTopRight } from 'react-icons/cg'
+import { BiLogoGoLang} from 'react-icons/bi'
 
 type Props = {}
 
@@ -10,6 +11,29 @@ const Projects: React.FC = () => {
     return (
 
         <div className='py-8 flex flex-col gap-8'>
+            <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
+                <a href="https://www.tweetailyze.click/" target='_blank'>
+                    <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
+                        <span className='font-bold text-3xl my-8'>GoX Framework</span>
+                        <CgArrowTopRight />
+                    </div>
+                </a>
+                <span className='text-xl font-light text-center w-full pb-4 text-adjust-center '>GoX is a framework designed to make working with HTMX and Go easier.</span>
+                <span className='text-xl font-bold text-center w-full py-4'>Tech Stack</span>
+                <div className='flex flex-row flex-wrap items-center gap-2'>
+                    <BiLogoGoLang className='button-icon-left' />
+                    +
+                    <span className='font-bold'>HTMX</span>
+                </div>
+                <div className='flex flex-row flex-wrap items-center gap-2 mt-4'>
+                    <SiAmazonaws className='button-icon-left' />
+                </div>
+                <span className='text-xl font-light text-left w-full py-4 gap-2 flex flex-wrap justify-center'>
+                    Other:
+                    <a href="https://alpinejs.dev/" className='underline' target='_blank'>Alpine.js</a>
+                    <a href="https://m3.material.io/" className='underline' target='_blank'>Material 3</a>
+                </span>
+            </div>
             <div className='max-w-xl w-full justify-center items-center flex flex-col animate-fade-in px-4 border-4'>
                 <a href="https://music-gpt.xyz/" target='_blank'>
                     <div className='flex flex-row items-center ml-2 hover:text-accent transition-all'>
